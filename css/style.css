@@ -1,0 +1,137 @@
+/* ---------- BASE ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  margin: 0;
+}
+
+/* Fundo suave em degradê, lembrando o app mobile */
+.bg-fintech {
+  background: radial-gradient(circle at top, #e4efff 0, #f5f7ff 40%, #dde6ff 100%);
+}
+
+/* ---------- CARD PRINCIPAL (CELULAR) ---------- */
+
+.fintech-card {
+  width: min(420px, 100% - 2rem);
+  border-radius: 32px;
+  background: #f5f7ff;
+}
+
+/* ---------- LOGO / TÍTULOS ---------- */
+
+.fintech-logo {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 1.6rem;
+  color: #1d52b3;
+}
+
+.fintech-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #222222;
+}
+
+/* ---------- CARDS RESUMO ---------- */
+
+.summary-card {
+  border-radius: 20px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.summary-value {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Cores aproximadas do protótipo */
+.summary-card--green {
+  background: #e2f7e9;
+  color: #0d7a3b;
+}
+
+.summary-card--red {
+  background: #ffe4e4;
+  color: #c43d3d;
+}
+
+.summary-card--blue {
+  background: #e4efff;
+  color: #2352b8;
+}
+
+/* ---------- CARD PRINCIPAIS GASTOS ---------- */
+
+.gastos-card {
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.gastos-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* “Gráfico” pizza fake apenas para visual */
+.pie-chart {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #2763d6 0 60%,
+    #f2f2f2 60% 100%
+  );
+  border: 6px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Lista de gastos */
+.gastos-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.gasto-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #6b7280;
+  flex-shrink: 0;
+}
+
+.gastos-link {
+  font-size: 0.9rem;
+  text-decoration: underline;
+  color: #2763d6;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 576px) {
+  .fintech-card {
+    padding-inline: 1.5rem !important;
+  }
+
+  .summary-card {
+    text-align: center;
+  }
+}
